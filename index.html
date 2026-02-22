@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>윤우의 한글 모험 v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Gothic+Coding:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen">
+      <div class="loader"></div>
+      <p>윤우의 모험을 준비 중이에요...</p>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="main-menu" class="screen hidden">
+      <div class="hero">
+        <h1>윤우의 한글 모험</h1>
+        <div class="character-container">
+          <img src="/characters/tralalero_tralala.png" alt="Tralalero" class="character-img" />
+        </div>
+      </div>
+      <button id="start-game" class="btn-primary">낱말 맞추기!</button>
+      <button id="start-syllable-game" class="btn-primary"
+        style="background-color: #ff9f43; box-shadow: 0 8px 0 #e67e22;">자음 모음 맞추기!</button>
+      <button id="open-parent-mode" class="btn-secondary" style="margin-top: 1rem;">아빠 메뉴 (보호자 모드)</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+      <div class="game-header">
+        <button id="back-to-menu" class="btn-icon">🏠</button>
+        <button id="replay-tts" class="btn-icon tts-btn">🔊 다시 듣기</button>
+        <div class="score-container">
+          별: <span id="star-count">0</span> ⭐
+        </div>
+      </div>
+      <div id="card-container" class="card-container">
+        <!-- Cards will be injected here -->
+      </div>
+      <div id="feedback-message" class="feedback-message hidden">정답이에요! 참 잘했어요!</div>
+    </div>
+
+    <!-- Syllable Game Screen -->
+    <div id="syllable-game-screen" class="screen hidden">
+      <div class="game-header">
+        <button id="back-to-menu-syllable" class="btn-icon">🏠</button>
+        <button id="replay-tts-syllable" class="btn-icon tts-btn">🔊 다시 듣기</button>
+        <div class="score-container">
+          별: <span id="syllable-star-count">0</span> ⭐
+        </div>
+      </div>
+      <div class="syllable-target-container">
+        <!-- Target slots to fill: consonant, vowel, and optional final consonant -->
+        <div class="syllable-slot" id="slot-consonant"></div>
+        <div class="syllable-slot" id="slot-vowel"></div>
+        <div class="syllable-slot" id="slot-jongseong" style="display: none;"></div>
+      </div>
+      <div class="syllable-options-container" id="syllable-options-container">
+        <!-- Options (consonants / vowels) will be injected here -->
+      </div>
+      <div id="syllable-feedback-message" class="feedback-message hidden">정답이에요! 참 잘했어요!</div>
+    </div>
+
+    <!-- Parent Mode Modal -->
+    <div id="parent-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>보호자 모드</h2>
+        <p>윤우가 아는 글자를 추가해 주세요.</p>
+        <div class="input-group">
+          <input type="text" id="new-word" placeholder="예: 우유, 가방" maxlength="10">
+          <button id="add-word" class="btn-small">추가</button>
+        </div>
+        <div class="word-list-container">
+          <h3>등록된 글자 목록</h3>
+          <ul id="word-list"></ul>
+        </div>
+        <button id="close-parent-mode" class="btn-close">닫기</button>
+      </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>보호자 확인</h3>
+        <p>아래 계산을 풀어주세요.</p>
+        <div id="math-problem"></div>
+        <input type="number" id="password-input" placeholder="정답">
+        <button id="verify-password" class="btn-small">확인</button>
+        <button id="cancel-password" class="btn-close">취소</button>
+      </div>
+    </div>
+
+    <!-- Global Dancing Brainrot -->
+    <img id="dancing-brainrot" class="dancing-brainrot hidden" src="" alt="Dancing Brainrot" />
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

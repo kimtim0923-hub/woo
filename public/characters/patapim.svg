@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 배경 -->
+  <circle cx="100" cy="100" r="95" fill="#fff3e0" stroke="#ff9800" stroke-width="4"/>
+  <!-- 요리사 모자 -->
+  <ellipse cx="100" cy="52" rx="28" ry="25" fill="white"/>
+  <ellipse cx="100" cy="52" rx="25" ry="22" fill="#fafafa"/>
+  <rect x="68" y="62" width="64" height="12" rx="4" fill="#e0e0e0"/>
+  <!-- 머리 -->
+  <circle cx="100" cy="88" r="30" fill="#ffcc80"/>
+  <!-- 눈썹 (요리사처럼 짙게) -->
+  <path d="M82,75 Q90,70 98,75" fill="none" stroke="#5d4037" stroke-width="4" stroke-linecap="round"/>
+  <path d="M102,75 Q110,70 118,75" fill="none" stroke="#5d4037" stroke-width="4" stroke-linecap="round"/>
+  <!-- 눈 -->
+  <circle cx="88" cy="84" r="9" fill="white"/>
+  <circle cx="112" cy="84" r="9" fill="white"/>
+  <circle cx="88" cy="84" r="5.5" fill="#1a237e"/>
+  <circle cx="112" cy="84" r="5.5" fill="#1a237e"/>
+  <circle cx="90" cy="82" r="2" fill="white"/>
+  <circle cx="114" cy="82" r="2" fill="white"/>
+  <!-- 콧수염 -->
+  <path d="M85,97 Q100,104 115,97" fill="none" stroke="#5d4037" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88,95 Q100,88 112,95" fill="none" stroke="#5d4037" stroke-width="2" stroke-linecap="round"/>
+  <!-- 코 -->
+  <ellipse cx="100" cy="95" rx="6" ry="5" fill="#ffb74d"/>
+  <!-- 입 (웃음) -->
+  <path d="M88,108 Q100,118 112,108" fill="none" stroke="#e64a19" stroke-width="3" stroke-linecap="round"/>
+  <!-- 몸통 (앞치마) -->
+  <ellipse cx="100" cy="148" rx="35" ry="30" fill="#ff9800"/>
+  <ellipse cx="100" cy="148" rx="25" ry="28" fill="white"/>
+  <!-- 앞치마 주머니 -->
+  <rect x="88" y="148" width="24" height="18" rx="5" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <!-- 팔 (냄비 들고있는) -->
+  <path d="M65,128 Q45,140 35,155" fill="none" stroke="#ffcc80" stroke-width="16" stroke-linecap="round"/>
+  <!-- 냄비 -->
+  <ellipse cx="30" cy="162" rx="20" ry="12" fill="#607d8b"/>
+  <ellipse cx="30" cy="152" rx="20" ry="8" fill="#78909c"/>
+  <rect x="10" y="150" width="40" height="12" rx="3" fill="#607d8b"/>
+  <!-- 이름 -->
+  <text x="100" y="182" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e65100">Brr Brr Patapim 👨‍🍳</text>
+</svg>
