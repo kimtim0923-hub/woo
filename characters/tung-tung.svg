@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 배경 -->
+  <circle cx="100" cy="100" r="95" fill="#fff8e1" stroke="#ffb300" stroke-width="4"/>
+  <!-- 통나무 몸통 -->
+  <rect x="55" y="65" width="90" height="100" rx="18" fill="#8d6e63"/>
+  <!-- 나무 결 -->
+  <line x1="55" y1="90" x2="145" y2="90" stroke="#6d4c41" stroke-width="2.5"/>
+  <line x1="55" y1="110" x2="145" y2="110" stroke="#6d4c41" stroke-width="2.5"/>
+  <line x1="55" y1="130" x2="145" y2="130" stroke="#6d4c41" stroke-width="2.5"/>
+  <line x1="55" y1="150" x2="145" y2="150" stroke="#6d4c41" stroke-width="2.5"/>
+  <!-- 통나무 위 단면 (나이테) -->
+  <ellipse cx="100" cy="65" rx="45" ry="16" fill="#a1887f"/>
+  <ellipse cx="100" cy="65" rx="35" ry="11" fill="#8d6e63"/>
+  <ellipse cx="100" cy="65" rx="22" ry="7" fill="#795548"/>
+  <ellipse cx="100" cy="65" rx="10" ry="3.5" fill="#6d4c41"/>
+  <!-- 눈 -->
+  <circle cx="82" cy="105" r="11" fill="white"/>
+  <circle cx="82" cy="105" r="7" fill="#33691e"/>
+  <circle cx="84" cy="103" r="2.5" fill="white"/>
+  <circle cx="118" cy="105" r="11" fill="white"/>
+  <circle cx="118" cy="105" r="7" fill="#33691e"/>
+  <circle cx="120" cy="103" r="2.5" fill="white"/>
+  <!-- 입 (웃음) -->
+  <path d="M82,128 Q100,142 118,128" fill="none" stroke="#4e342e" stroke-width="3" stroke-linecap="round"/>
+  <!-- 팔 (통나무 옆으로 뻗은) -->
+  <ellipse cx="42" cy="120" rx="15" ry="9" fill="#8d6e63" transform="rotate(-15,42,120)"/>
+  <ellipse cx="158" cy="120" rx="15" ry="9" fill="#8d6e63" transform="rotate(15,158,120)"/>
+  <!-- 이름 -->
+  <text x="100" y="178" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#5d4037">Tung Tung 🥁</text>
+</svg>
