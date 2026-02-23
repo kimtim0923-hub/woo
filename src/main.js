@@ -11,7 +11,14 @@ const characters = [
   'ballerina_cappuccina.png',
   'spaghetto_machetto.png',
   'ninja_tortellini.png',
-  'pizzaboi_mamma_mia.png'
+  'pizzaboi_mamma_mia.png',
+  'custom_1.png',
+  'custom_2.png',
+  'custom_3.png',
+  'custom_4.png',
+  'custom_5.png',
+  'custom_6.png',
+  'custom_7.png'
 ];
 
 // --- State Management ---
@@ -148,7 +155,7 @@ function startNewRound() {
   cardContainer.innerHTML = '';
 
   if (state.words.length < 4) {
-    cardContainer.innerHTML = '<p>아빠 메뉴에서 글자를 4개 이상 추가해주세요!</p>';
+    cardContainer.innerHTML = '<p>엄마 메뉴에서 글자를 4개 이상 추가해주세요!</p>';
     return;
   }
 
@@ -171,7 +178,7 @@ function startNewRound() {
     // Character Image
     const img = document.createElement('img');
     img.className = 'card-image';
-    img.src = `/characters/${shuffledChars[idx % shuffledChars.length]}`;
+    img.src = `${import.meta.env.BASE_URL}characters/${shuffledChars[idx % shuffledChars.length]}`;
     img.alt = 'Character';
     card.appendChild(img);
 
@@ -190,8 +197,8 @@ function startNewRound() {
 }
 
 // --- Sound Effects ---
-const successSound = new Audio('/sounds/success.ogg');
-const failSound = new Audio('/sounds/fail.ogg');
+const successSound = new Audio(`${import.meta.env.BASE_URL}sounds/success.ogg`);
+const failSound = new Audio(`${import.meta.env.BASE_URL}sounds/fail.ogg`);
 
 function handleCardClick(e) {
   if (state.isProcessingClick) return;
@@ -215,7 +222,7 @@ function handleCardClick(e) {
     // Show dancing brainrot
     const brainrot = document.getElementById('dancing-brainrot');
     const randomChar = characters[Math.floor(Math.random() * characters.length)];
-    brainrot.src = `/characters/${randomChar}`;
+    brainrot.src = `${import.meta.env.BASE_URL}characters/${randomChar}`;
     brainrot.classList.remove('hidden');
     brainrot.classList.add('tada');
 
@@ -407,7 +414,7 @@ function handleSyllableSuccess() {
   const brainrot = document.getElementById('dancing-brainrot');
   if (brainrot) {
     const randomChar = characters[Math.floor(Math.random() * characters.length)];
-    brainrot.src = `/characters/${randomChar}`;
+    brainrot.src = `${import.meta.env.BASE_URL}characters/${randomChar}`;
     brainrot.classList.remove('hidden');
     brainrot.classList.add('tada');
   }
